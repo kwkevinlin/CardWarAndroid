@@ -27,5 +27,24 @@
             android:id="@+id/playButton" android:layout_gravity="center_horizontal"
             android:onClick="playCard" android:layout_weight="0.09"/>
 
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_horizontal"
+            android:layout_weight="0.19">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Score: "
+                android:id="@+id/score1TView"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Score"
+                android:id="@+id/score2TView"/>
+    </LinearLayout>
+
 </LinearLayout>
 
