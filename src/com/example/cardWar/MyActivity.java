@@ -16,7 +16,7 @@ public class MyActivity extends Activity {
 
     ImageView cardView1, cardView2;
     Button playButton;
-    TextView score1View, score2View;
+    TextView score1View, score2View, winnerText;
     int num1, num2, sIndex1, sIndex2, score1 = 0, score2 = 0;
     Random rand = new Random();
     int[] cards = {R.drawable.cardaceofclubs, R.drawable.cardaceofdiamonds, R.drawable.cardaceofhearts, R.drawable.cardaceofspades, R.drawable.card2ofclubs, R.drawable.card2ofdiamonds, R.drawable.card2ofhearts, R.drawable.card2ofspades, R.drawable.card3ofclubs, R.drawable.card3ofdiamonds, R.drawable.card3ofhearts, R.drawable.card3ofspades, R.drawable.card4ofclubs, R.drawable.card4ofdiamonds, R.drawable.card4ofhearts, R.drawable.card4ofspades, R.drawable.card5ofclubs, R.drawable.card5ofdiamonds, R.drawable.card5ofhearts, R.drawable.card5ofspades, R.drawable.card6ofclubs, R.drawable.card6ofdiamonds, R.drawable.card6ofhearts, R.drawable.card6ofspades, R.drawable.card7ofclubs, R.drawable.card7ofdiamonds, R.drawable.card7ofhearts, R.drawable.card7ofspades, R.drawable.card8ofclubs, R.drawable.card8ofdiamonds, R.drawable.card8ofhearts, R.drawable.card8ofspades, R.drawable.card9ofclubs, R.drawable.card9ofdiamonds, R.drawable.card9ofhearts, R.drawable.card9ofspades, R.drawable.card10ofclubs, R.drawable.card10ofdiamonds, R.drawable.card10ofhearts, R.drawable.card10ofspades, R.drawable.cardjackofclubs, R.drawable.cardjackofdiamonds, R.drawable.cardjackofhearts, R.drawable.cardjackofspades, R.drawable.cardqueenofclubs, R.drawable.cardqueenofdiamonds, R.drawable.cardqueenofhearts, R.drawable.cardqueenofspades, R.drawable.cardkingofclubs, R.drawable.cardkingofdiamonds, R.drawable.cardkingofhearts, R.drawable.cardkingofspades};
@@ -32,6 +32,7 @@ public class MyActivity extends Activity {
         playButton = (Button)findViewById(R.id.playButton);
         score1View = (TextView)findViewById(R.id.score1TView);
         score2View = (TextView)findViewById(R.id.score2TView);
+        winnerText = (TextView)findViewById(R.id.winnerText);
 
     }
 
@@ -55,16 +56,20 @@ public class MyActivity extends Activity {
         if (num1 > num2) {
             score1++;
             score1View.setText("Score" + score1);
+            winnerText.setText("Player 1 Wins!");
         } else if (num1 < num2) {
             score2++;
             score2View.setText("Score: " + score2);
+            winnerText.setText("Player 2 Wins!");
         } else {
             if (sIndex1 > sIndex2) {
                 score1++;
                 score1View.setText("Score: " + score1);
+                winnerText.setText("Player 1 Wins!");
             } else {
                 score2++;
                 score2View.setText("Score: " + score2);
+                winnerText.setText("Player 2 Wins!");
             }
         }
     }
