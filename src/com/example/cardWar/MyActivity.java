@@ -66,10 +66,16 @@ public class MyActivity extends Activity {
                 score1++;
                 score1View.setText("Score: " + score1);
                 winnerText.setText("Player 1 Wins!");
-            } else {
+            } else if (sIndex1 < sIndex2){
                 score2++;
                 score2View.setText("Score: " + score2);
                 winnerText.setText("Player 2 Wins!");
+            } else {
+                score1++;
+                score2++;
+                score1View.setText("Score: " + score1);
+                score2View.setText("Score: " + score2);
+                winnerText.setText("Tie!");
             }
         }
     }
