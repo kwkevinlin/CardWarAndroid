@@ -38,19 +38,19 @@ public class MyActivity extends Activity {
 
     public void playCard(View view) {
 
-        //Suite order: clubs, diamonds, hearts, spades
+        //Suit order: clubs, diamonds, hearts, spades
 
         //Card 1
         num1 = rand.nextInt(13) + 1;
         sIndex1 = rand.nextInt(4) + 1;
-        System.out.println("Card1 num: " + num1 + ", suite: " + sIndex1);
+        System.out.println("Card1 num: " + num1 + ", suit: " + sIndex1);
         cardView1.setImageResource(cards[num1 * 4 + sIndex1 - 5]); //-4 because ace = [0 - 3], 1 = [4 - 7]
                                                                  //-1 because starts at 0
                                                                  //thus total -5
         //Card 2
         num2 = rand.nextInt(13) + 1;
         sIndex2 = rand.nextInt(4) + 1;
-        System.out.println("Card2 num: " + num2 + ", suite: " + sIndex2);
+        System.out.println("Card2 num: " + num2 + ", suit: " + sIndex2);
         cardView2.setImageResource(cards[num2 * 4 + sIndex2 - 5]);
 
         if (num1 > num2) {
