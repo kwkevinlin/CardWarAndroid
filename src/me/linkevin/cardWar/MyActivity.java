@@ -1,4 +1,4 @@
-package com.example.cardWar;
+package me.linkevin.cardWar;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -55,7 +55,7 @@ public class MyActivity extends Activity {
 
         if (num1 > num2) {
             score1++;
-            score1View.setText("Score" + score1);
+            score1View.setText("Score: " + score1);
             winnerText.setText("Player 1 Wins!");
         } else if (num1 < num2) {
             score2++;
@@ -75,7 +75,7 @@ public class MyActivity extends Activity {
                 score2++;
                 score1View.setText("Score: " + score1);
                 score2View.setText("Score: " + score2);
-                winnerText.setText("Tie!");
+                winnerText.setText("Tie, both players win!");
             }
         }
     }
